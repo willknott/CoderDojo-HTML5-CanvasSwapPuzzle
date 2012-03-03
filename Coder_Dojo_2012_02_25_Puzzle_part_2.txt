@@ -1,0 +1,204 @@
+
+Coder Dojo 2012-02-25
+
+HTML5 Shuffle Puzzle
+
+CONTINUED
+
+UDACity.com - Build a search engine
+
+UDACITY Webcrawler
+
+playfic.com, make your own text adventure
+
+More for the smallies
+
+MineCraft Servers and networking
+
+LAST week...
+
+Just display
+
+github.com/willknott
+
+github.com/coderdojo
+
+Last week's slides, code (puzzle1) and images are available
+
+Next, create a function to start the Puzzle
+
+function initPuzzle(){
+            pieces = [];
+            mouse = {x:0,y:0};
+            currentPiece = null;
+            currentDropPiece = null;
+            stage.drawImage(img, 
+
+                0, 0, puzzleWidth, puzzleHeight,                                                 
+
+                0, 0, puzzleWidth, puzzleHeight);
+            buildPieces();
+        }
+
+
+
+
+//Initializing bits for later 
+
+Huh? You created these variables...
+
+currentPiece = null;
+currentDropPiece = null;
+
+Null means "No value". 
+
+mouse = {x:0,y:0};
+
+This is a full one value array...and an object.
+
+
+
+
+Think about it, what does a mouse position consist of...
+
+
+
+
+pieces = [];
+
+This is an empty array
+
+
+
+
+What is an array?
+
+http://www.w3schools.com/js/js_obj_array.asp
+
+
+
+
+An array is a variable that can contain more than one value.
+
+
+
+
+You can declare a complete array, or, push values on to an array.
+
+For
+
+We are about to hit a for loop
+
+
+
+
+http://www.w3schools.com/js/js_loop_for.asp
+
+
+
+
+  for (variable=startvalue;
+
+         variable«=endvalue;
+
+         variable=variable+increment)
+
+        {
+
+            do something
+
+        }
+
+Now let's make a function to split our image into pieces
+
+ 
+
+function buildPieces(){
+            var i;
+            var piece;
+            var xPos = 0;
+            var yPos = 0;
+            for(i = 0;
+
+                 i « (PUZZLE_DIFFICULTY * PUZZLE_DIFFICULTY);
+
+                 i++){
+                    piece = {}; //new object
+                    piece.sx = xPos;
+                    piece.sy = yPos;
+                    pieces.push(piece); 
+
+                    //add this object to the pieces array
+
+                
+
+
+
+
+Continued from last page
+
+ 
+
+                    xPos += pieceWidth; //move a piece to the right
+
+
+
+
+                    if(xPos »= puzzleWidth){
+
+                            // if we fall off the edge of the image
+                            xPos = 0;
+
+                            //back to the left edge
+                            yPos += pieceHeight;
+
+                            // and move down one
+                    } // end of if
+
+
+            } //end of for
+
+
+            document.onmousedown = shufflePuzzle;
+        }
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
+
+After dividing up our image, we need to shuffle them around. 
+
+Or cheat by just reversing the order 
+
+ 
+
+function shuffleArray(o)
+
+        {
+
+            return o.reverse();
+        }
+
+ 
+
+http://www.w3schools.com/jsref/jsref_reverse.asp 
+
+
+
+
+Yes this does make a crap game.
+
+We'll look at shuffling and other mathematics next time.
+
+And we've run out of time
+
+We'll continue this next week
+
