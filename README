@@ -1,5 +1,18 @@
 Tutorial on doing a HTML5 image swapping puzzle (similar to a sliding 
-puzzle) for Coder Dojo Cork beginning 2012-02-18.
+puzzle) for Coder Dojo Cork beginning 2012-02-18 for 4 weeks.
 
-Will take more than one class to finish.
-Further updates and slides to follow.
+Covered...
+Loops For 
+Logic (or, and & not gates)
+Arrays
+Objects
+Mouse interaction
+Canvas
+
+If you are reading along, read the pdf/ppt/txt files for the 
+comments and documentation of the code.
+
+And yes, the shuffle barely works, but the simple reverse was used 
+to just jumble the initial picture. 
+Proper shuffleing will be covered later.
+
